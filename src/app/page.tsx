@@ -1,10 +1,10 @@
-import { PageLogin } from "./auth/login/page";
+import DashboardPage from "./dashboard/page";
 
 
-export default function Home() {
-  return (
-    <main className="w-screen h-screen">
-      <PageLogin/>
-    </main>
-  )
+export default function HomePage(){
+  return(
+    <div>
+      <DashboardPage/>
+    </div>
+  );
 }

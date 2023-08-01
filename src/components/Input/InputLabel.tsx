@@ -4,6 +4,6 @@ interface InputLabelProps{
 
 export function InputLabel({ text }: InputLabelProps){
   return(
-    <label>{text}</label>
+    <label className="text-cyan-950 text-sm">{text}</label>
   );
 }
