@@ -11,10 +11,10 @@ export default function LostPage() {
   return (
     <Form title="Recuperar senha">
       <Input.Root>
-        <Input.Label text="Email" />
+        <Input.Label text="Informe seu email" />
         <Input.Field
           security="email"
-          placeholder="Digite seu email"
+          placeholder="Digite o email cadastrado"
         />
       </Input.Root>
 

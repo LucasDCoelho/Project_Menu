@@ -11,6 +11,11 @@ import { Link } from "@/components/Link";
 export default function PageLogin() {
   const [email, setEmail] = useState<string>("")
   const [password, setPassword] = useState<string>("")
+  const [ visiblePassword, setVisiblePassword ] = useState(false)
+
+  const toggleVisible = ()=>{
+    setVisiblePassword(!visiblePassword)
+  }
 
   return (
     <Form title="Seja Bem vindo">
@@ -27,11 +32,12 @@ export default function PageLogin() {
       <Input.Root>
         <Input.Label text="Senha" />
         <Input.Field
-          security="password"
+          security={!visiblePassword ? `password` : `text`}
           placeholder="*******"
           value={password}
           change={(e) => setPassword(e.target.value)}
         />
+        <Input.Action toggleClick={toggleVisible}/>
       </Input.Root>
 
 

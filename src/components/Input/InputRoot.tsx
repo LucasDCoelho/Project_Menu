@@ -4,7 +4,7 @@ export function InputRoot({
   children: React.ReactNode
 }){
   return(
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
       {children}
     </div>
   );

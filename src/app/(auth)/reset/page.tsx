@@ -9,16 +9,16 @@ export default function ResetPage() {
       <Input.Root>
         <Input.Label text="Nova senha" />
         <Input.Field
-          security="text"
+          security="password"
           placeholder="Digite sua nova senha"
         />
       </Input.Root>
 
       <Input.Root>
-        <Input.Label text="Repita nova senha" />
+        <Input.Label text="Confirme senha" />
         <Input.Field
-          security="text"
-          placeholder="Repita sua nova senha"
+          security="password"
+          placeholder="Confime sua senha"
         />
       </Input.Root>
 
@@ -27,7 +27,7 @@ export default function ResetPage() {
       </Link.Root>
 
       <Button
-        text="Entrar"
+        text="Enviar"
         type="submit"
       />
     </Form>

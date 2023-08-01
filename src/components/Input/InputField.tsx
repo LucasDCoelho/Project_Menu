@@ -1,10 +1,9 @@
-import { ChangeEventHandler } from "react";
-
 interface InputFieldProps{
-  security?: "password" | "email" | "text"
-  placeholder: string
-  change?: React.ChangeEventHandler<HTMLInputElement>
-  value?: string
+  security?: "password" | "email" | "text";
+  placeholder: string;
+  change?: React.ChangeEventHandler<HTMLInputElement>;
+  value?: string;
+  allowVisibility?: boolean;
 }
 
 export function InputField({
