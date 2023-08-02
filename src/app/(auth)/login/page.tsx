@@ -6,19 +6,25 @@ import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import { Form } from "@/components/Form";
 import { Link } from "@/components/Link";
+import { useAuth } from "@/hooks/useAuth";
 
 
 export default function PageLogin() {
-  const [email, setEmail] = useState<string>("")
-  const [password, setPassword] = useState<string>("")
+  const [ email, setEmail ] = useState<string>("")
+  const [ password, setPassword ] = useState<string>("")
   const [ visiblePassword, setVisiblePassword ] = useState(false)
+  const { signIn } = useAuth()
 
   const toggleVisible = ()=>{
     setVisiblePassword(!visiblePassword)
   }
 
+  const handleSubmit = () => {
+    
+  }
+
   return (
-    <Form title="Seja Bem vindo">
+    <Form title="Seja Bem vindo" submit={handleSubmit} >
       <Input.Root>
         <Input.Label text="Email" />
         <Input.Field

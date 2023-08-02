@@ -10,8 +10,8 @@ const AuthProvider=({
 }) => {
   const [ user, setUser ] = useState<User | null>(null)
 
-  const signIn = () =>{
-    fetch("https://64c7bfcda1fe0128fbd540b5.mockapi.io/")
+  const signIn = async () =>{
+    await fetch("https://64c7bfcda1fe0128fbd540b5.mockapi.io/")
     .then((res)=>{
       console.log(res.json())
     })
