@@ -5,7 +5,7 @@ interface AuthLayoutProps{
 
 export default function AuthLayout({ children }: AuthLayoutProps){
   return(
-    <div className="w-1/2 bg-cyan-600 h-full flex justify-center items-center">
+    <div className="lg:w-1/2 bg-cyan-600 h-full flex justify-center items-center md:w-full sm: w-full">
       {children}
     </div>
   );
