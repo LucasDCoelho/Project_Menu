@@ -1,7 +1,7 @@
 interface FormProps{
   children: React.ReactNode
   title: string
-  submit?: ()=> void
+  submit?: (event: React.FormEvent<HTMLFormElement>)=> void
 }
 
 export function Form({ 

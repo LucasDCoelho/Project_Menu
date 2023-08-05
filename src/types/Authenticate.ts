@@ -1,11 +1,16 @@
 export interface AuthContextData{
-  signIn: () => void
+  signIn: (email: string, password: string) => Promise<void>
+  signOut: () => void;
   user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string;
 }
 
 export interface User{
-  id: string;
   name: string;
   avatar: string;
-  email:string;
+  email: string;
+  password?: string;
+  id: string;
 }

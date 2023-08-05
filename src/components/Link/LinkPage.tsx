@@ -2,7 +2,7 @@ import Link from "next/link";
 
 interface LinkPageProps{
   link: string;
-  content: string;
+  content?: string;
 }
 
 export function LinkPage({
