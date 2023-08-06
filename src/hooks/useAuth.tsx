@@ -33,7 +33,7 @@ export const AuthProvider = ({
       const data: User[] = await response.json();
       const user = data.find((userData: User) => userData.email === email)
 
-      if (!(email === user?.email || password === user?.password)) {
+      if (!email === Boolean(user?.email) && !password === Boolean(user?.password)) {
         setError("Falha no email ou senha!")
       }
 

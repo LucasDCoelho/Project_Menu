@@ -21,7 +21,6 @@ export function Button({
       <button
         {...rest}
         type={type} 
-        className={`text-cyan-50 bg-cyan-500 w-full mt-4 py-1 rounded-sm font-semibold`}
         onClick={click}
       >
         {text}
