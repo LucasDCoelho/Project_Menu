@@ -21,10 +21,11 @@ function Content() {
     return <Loading />
   }
 
-  return !isAuthenticated ? <AuthLayout children={<>
-    <PageLogin />
-  </>} /> :
-    <AuthLayout children={<>
-      <DashboardLogadoPage />
-    </>} />;
+  return !isAuthenticated ? 
+    <AuthLayout>
+      <PageLogin/>
+    </AuthLayout> :
+    <AuthLayout>
+      <DashboardLogadoPage/>
+    </AuthLayout>;
 }
