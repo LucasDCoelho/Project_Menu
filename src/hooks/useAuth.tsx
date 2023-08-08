@@ -1,3 +1,4 @@
+"use clinet"
 import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
