@@ -6,7 +6,7 @@ import { Avatar } from "@/components/Avatar/Avatar";
 import { Button } from "@/components/Button";
 
 export function HeaderDashboard() {
-  const { user, signOut } = useAuth();
+  const { user, logOut } = useAuth();
 
   return (
     <header className="flex items-start justify-end py-4 px-8 w-full">
@@ -22,7 +22,7 @@ export function HeaderDashboard() {
           <Button
             type="button"
             text={"Sair"}
-            click={signOut}
+            click={logOut}
             className='text-xs  font-semibold'
           />
         </div>

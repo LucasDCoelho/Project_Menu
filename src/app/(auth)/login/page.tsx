@@ -14,7 +14,7 @@ export default function PageLogin() {
   const [ email, setEmail ] = useState<string>("")
   const [ password, setPassword ] = useState<string>("")
   const [ visiblePassword, setVisiblePassword ] = useState(false)
-  const { signIn, error } = useAuth()
+  const { logIn, error } = useAuth()
 
 
 
@@ -24,7 +24,7 @@ export default function PageLogin() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    signIn(email, password)
+    logIn(email, password)
   }
 
 

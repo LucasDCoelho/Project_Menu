@@ -22,7 +22,7 @@ export const AuthProvider = ({
   console.log("isLoading in AuthProvider:", isLoading);
   console.log("isAuthenticated in AuthProvider:", isAuthenticated);
 
-  const signIn = async (email: string, password: string) => {
+  const logIn = async (email: string, password: string) => {
     console.log(email);
     console.log(password);
 
@@ -52,7 +52,7 @@ export const AuthProvider = ({
     console.log("Oi")
   }
 
-  const signOut = async () => {
+  const logOut = async () => {
     console.log("Signout called");
     setIsAuthenticated(false)
     setUser(null)
@@ -75,8 +75,8 @@ export const AuthProvider = ({
   }, [])
 
   const contextValue = {
-    signIn,
-    signOut, 
+    logIn,
+    logOut, 
     user,
     isAuthenticated,
     isLoading,
