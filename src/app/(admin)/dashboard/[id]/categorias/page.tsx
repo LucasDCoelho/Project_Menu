@@ -12,12 +12,10 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { SideBar } from "@/components/SideBar/SideBar";
-
 
 
 export default function CategoriasPage() {
-  const [ isModalOpen, setIsModalOpen ] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
 
   return (
@@ -29,13 +27,33 @@ export default function CategoriasPage() {
           text="Nova Categoria"
           type="button"
           className="bg-cyan-600 px-3 py-2 rounded text-cyan-50 hover:bg-cyan-500"
-          click={()=>{ setIsModalOpen(isModalOpen) }}
+          click={() => { setIsModalOpen(!isModalOpen) }}
         />
 
         {isModalOpen ? (
-          <SideBar/>
-        ): null}
-    
+          <div 
+            className="w-full h-full fixed bg-cyan-600 top-0 left-0 bg-opacity-20"
+            onClick={()=>{ setIsModalOpen(!isModalOpen) }}
+          >
+            <div
+              className={`top-0 right-0 bg-cyan-700 fixed h-full w-1/5 p-6`}
+            >
+              <Button
+                text="X"
+                type="button"
+                click={() => { setIsModalOpen(!isModalOpen) }}
+                className="text-cyan-50 hover:bg-cyan-50 hover:rounded-full w-7 h-7 hover:text-cyan-700"
+              />
+              <div
+                className="flex "
+              >
+                <h3>Hello World</h3>
+              </div>
+            </div>
+          </div>
+
+        ) : null}
+
       </div>
       <Table className="px-10">
         <TableCaption>Lista de categorias</TableCaption>
