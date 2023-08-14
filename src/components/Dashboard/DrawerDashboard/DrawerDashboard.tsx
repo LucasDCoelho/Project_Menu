@@ -1,6 +1,8 @@
 "use client"
 import { useAuth } from "@/hooks/useAuth";
 import { Link } from "../../Link";
+import { Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function DrawerDashboard() {
   const { user } = useAuth()
@@ -11,7 +13,14 @@ export function DrawerDashboard() {
 
       <div className="flex flex-col items-start px-8 py-10 gap-4 text-cyan-50">
         <Link.Root>
-          <Link.Linked link={`/dashboard/${user?.id}`} content="Inicio" />
+          <Button 
+            variant={"outline"}
+            size={"icon"}
+            className="flex items-center w-60 p-4 gap-1 border"
+          >
+            <Home className="-mt-1"/> 
+            <Link.Linked link={`/dashboard/${user?.id}`} content="Inicio" />
+          </Button>
         </Link.Root>
 
         <Link.Root>

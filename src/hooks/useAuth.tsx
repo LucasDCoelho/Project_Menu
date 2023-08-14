@@ -12,7 +12,7 @@ export const AuthProvider = ({
 }: {
   children: React.ReactNode
 }) => {
-  const [user, setUser] = useState<User | null>(null)
+  const [user, setUser] = useState<User | null>(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");

@@ -31,7 +31,7 @@ export default function PageLogin() {
   return (
     <Form title="Seja Bem vindo" submit={handleSubmit} >
       <Input.Root>
-        <Input.Label text="Email" />
+        <Input.Label text="Email"  className="text-cyan-950 text-sm"/>
         <Input.Field
           security="email"
           placeholder="Digite seu email"
@@ -42,7 +42,7 @@ export default function PageLogin() {
       </Input.Root>
 
       <Input.Root>
-        <Input.Label text="Senha" />
+        <Input.Label text="Senha" className="text-cyan-950 text-sm"/>
         <Input.Field
           security={!visiblePassword ? `password` : `text`}
           placeholder="*******"

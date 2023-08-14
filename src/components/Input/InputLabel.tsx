@@ -1,9 +1,10 @@
 interface InputLabelProps{
   text: string
+  className: string
 }
 
-export function InputLabel({ text }: InputLabelProps){
+export function InputLabel({ text, className }: InputLabelProps){
   return(
-    <label className="text-cyan-950 text-sm">{text}</label>
+    <label className={className}>{text}</label>
   );
 }
