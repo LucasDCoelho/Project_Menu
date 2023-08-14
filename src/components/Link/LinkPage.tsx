@@ -1,18 +1,20 @@
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 
 interface LinkPageProps{
   link: string;
   content?: string;
+  className?: string;
 }
 
 export function LinkPage({
   link,
-  content
+  content,
+  className
 }: LinkPageProps) {
   return (
     <Link
       href={link}
-      className="text-xs underline"
+      className={className}
     >
       {content}
     </Link>

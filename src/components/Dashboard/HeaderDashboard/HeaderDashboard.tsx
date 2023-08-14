@@ -23,7 +23,7 @@ export function HeaderDashboard() {
             type="button"
             text={"Sair"}
             click={logOut}
-            className='text-xs  font-semibold'
+            className='text-xs font-semibold'
           />
         </div>
         <div>

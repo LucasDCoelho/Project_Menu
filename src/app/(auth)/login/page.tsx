@@ -55,7 +55,7 @@ export default function PageLogin() {
       {error ? <p className="text-sm text-red-300">{error}</p> : ""}
 
       <Link.Root>
-        <Link.Linked link="/lost" content="Esqueci minha senha" />
+        <Link.Linked link="/lost" content="Esqueci minha senha" className="text-xs underline" />
       </Link.Root>
 
       <Button

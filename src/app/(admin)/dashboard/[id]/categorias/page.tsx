@@ -1,3 +1,8 @@
+"use client"
+import { useState } from "react";
+
+
+import { Button } from "@/components/Button";
 import {
   Table,
   TableBody,
@@ -7,11 +12,32 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { SideBar } from "@/components/SideBar/SideBar";
 
-export default function CategoriasPage(){
-  return(
+
+
+export default function CategoriasPage() {
+  const [ isModalOpen, setIsModalOpen ] = useState(false);
+
+
+  return (
     <>
-      <Table className="px-10"> 
+      <div className="flex justify-between px-8 my-8">
+        <h2 className="text-2xl">Categorias</h2>
+
+        <Button
+          text="Nova Categoria"
+          type="button"
+          className="bg-cyan-600 px-3 py-2 rounded text-cyan-50 hover:bg-cyan-500"
+          click={()=>{ setIsModalOpen(isModalOpen) }}
+        />
+
+        {isModalOpen ? (
+          <SideBar/>
+        ): null}
+    
+      </div>
+      <Table className="px-10">
         <TableCaption>Lista de categorias</TableCaption>
         <TableHeader >
           <TableRow >
@@ -28,6 +54,12 @@ export default function CategoriasPage(){
           </TableRow>
         </TableBody>
       </Table>
+
+
+
+
+
+
     </>
   );
 }
